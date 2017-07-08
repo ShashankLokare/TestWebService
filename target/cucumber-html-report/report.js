@@ -117,7 +117,7 @@ formatter.match({
   "location": "STep_Definitions.connectto_webservice_and_check_status(String)"
 });
 formatter.result({
-  "duration": 1154955606,
+  "duration": 1214146766,
   "status": "passed"
 });
 formatter.scenario({
@@ -161,7 +161,7 @@ formatter.match({
   "location": "STep_Definitions.connectto_webservice_and_check_status(String)"
 });
 formatter.result({
-  "duration": 499620847,
+  "duration": 500246329,
   "status": "passed"
 });
 });

@@ -5,16 +5,16 @@
       {
         "name": "connectto webservice and check status \"200\"",
         "aggregatedDurations": {
-          "average": 0.827288226,
-          "median": 0.827288226
+          "average": 0.857196547,
+          "median": 0.857196547
         },
         "durations": [
           {
-            "duration": 1.154955606,
+            "duration": 1.214146766,
             "location": "src/test/cucumber/test1.feature:8"
           },
           {
-            "duration": 0.499620847,
+            "duration": 0.500246329,
             "location": "src/test/cucumber/test1.feature:8"
           }
         ]

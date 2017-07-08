@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1154955606,
+              "duration": 1214146766,
               "status": "passed"
             },
             "comments": [
@@ -58,7 +58,7 @@
         "steps": [
           {
             "result": {
-              "duration": 499620847,
+              "duration": 500246329,
               "status": "passed"
             },
             "comments": [
