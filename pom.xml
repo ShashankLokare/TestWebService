@@ -12,8 +12,19 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
   </properties>
+  
 <build>
+<resources>            <!-- general Maven resources -->
+    <resource>
+        <directory>${project.basedir}</directory>
+        <filtering>true</filtering>
+        <includes>
+            <include>**/Dockerfile</include>
+        </includes>
+    </resource>
+</resources>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -21,23 +32,42 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.20</version>
         </plugin>
-         <plugin>
-    <groupId>com.spotify</groupId>
-    <artifactId>docker-maven-plugin</artifactId>
-    <version>0.4.5</version>
-        <configuration>
-            <imageName>springdocker</imageName>
-            <baseImage>java</baseImage>
-            <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-            <resources>
-                <resource>
-                    <targetPath>/</targetPath>
-                    <directory>${project.build.directory}</directory>
-                    <include>${project.build.finalName}.jar</include>
-                </resource>
-            </resources>
-        </configuration>
-    </plugin>
+    <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.2.3</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>build</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <dockerDirectory>${project.build.directory}/classes</dockerDirectory>
+
+                <pushImage>${push.image}</pushImage>      <!-- true when Jenkins builds, false otherwise -->
+
+                <imageName>${docker.registry}alooma/${project.artifactId}:${git.commit.id.abbrev}</imageName>
+                <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.basedir}</directory>
+                        <excludes>
+                            <exclude>target/**/*</exclude>
+                            <exclude>pom.xml</exclude>
+                            <exclude>*.iml</exclude>
+                        </excludes>
+                    </resource>
+                    <rescource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>webgate.war</include>
+                    </rescource>
+                </resources>
+            </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
