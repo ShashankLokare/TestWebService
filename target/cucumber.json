@@ -1,0 +1,104 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 12,
+        "name": "launch a webservice and test the weather",
+        "description": "",
+        "id": "create-a-test-feature-for-testing;launch-a-webservice-and-test-the-weather;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1154955606,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 4,
+                "value": "#Given launching a web service for url \"\u003curl\u003e\" and city \"\u003ccity\u003e\""
+              },
+              {
+                "line": 5,
+                "value": "#| url\u003dweburl | city\u003d\u003ccityname\u003e |"
+              },
+              {
+                "line": 6,
+                "value": "#When receives a status \"\u003cstatus\u003e\""
+              },
+              {
+                "line": 7,
+                "value": "#Then verify the weather \"\u003cRow_num\u003e\""
+              }
+            ],
+            "line": 8,
+            "name": "connectto webservice and check status \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 39
+                }
+              ],
+              "location": "STep_Definitions.connectto_webservice_and_check_status(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "launch a webservice and test the weather",
+        "description": "",
+        "id": "create-a-test-feature-for-testing;launch-a-webservice-and-test-the-weather;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 499620847,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 4,
+                "value": "#Given launching a web service for url \"\u003curl\u003e\" and city \"\u003ccity\u003e\""
+              },
+              {
+                "line": 5,
+                "value": "#| url\u003dweburl | city\u003d\u003ccityname\u003e |"
+              },
+              {
+                "line": 6,
+                "value": "#When receives a status \"\u003cstatus\u003e\""
+              },
+              {
+                "line": 7,
+                "value": "#Then verify the weather \"\u003cRow_num\u003e\""
+              }
+            ],
+            "line": 8,
+            "name": "connectto webservice and check status \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 39
+                }
+              ],
+              "location": "STep_Definitions.connectto_webservice_and_check_status(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "create a test feature for testing",
+    "description": "",
+    "id": "create-a-test-feature-for-testing",
+    "keyword": "Feature",
+    "uri": "src/test/cucumber/test1.feature"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "source": "^connectto webservice and check status \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "connectto webservice and check status \"200\"",
+        "aggregatedDurations": {
+          "average": 0.827288226,
+          "median": 0.827288226
+        },
+        "durations": [
+          {
+            "duration": 1.154955606,
+            "location": "src/test/cucumber/test1.feature:8"
+          },
+          {
+            "duration": 0.499620847,
+            "location": "src/test/cucumber/test1.feature:8"
+          }
+        ]
+      }
+    ]
+  }
+]

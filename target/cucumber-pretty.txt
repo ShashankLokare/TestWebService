@@ -1,0 +1,24 @@
+Feature: create a test feature for testing
+
+  Scenario Outline: launch a webservice and test the weather [90m# src/test/cucumber/test1.feature:3[0m
+    #Given launching a web service for url "<url>" and city "<city>"
+    #| url=weburl | city=<cityname> |
+    #When receives a status "<status>"
+    #Then verify the weather "<Row_num>"
+    [36mThen [0m[36mconnectto webservice and check status "200"[0m
+
+    Examples: 
+
+  Scenario Outline: launch a webservice and test the weather [90m# src/test/cucumber/test1.feature:12[0m
+    #Given launching a web service for url "<url>" and city "<city>"
+    #| url=weburl | city=<cityname> |
+    #When receives a status "<status>"
+    #Then verify the weather "<Row_num>"
+    [32mThen [0m[32mconnectto webservice and check status "[0m[32m[1m200[0m[32m"[0m         [90m# STep_Definitions.connectto_webservice_and_check_status(String)[0m
+
+  Scenario Outline: launch a webservice and test the weather [90m# src/test/cucumber/test1.feature:13[0m
+    #Given launching a web service for url "<url>" and city "<city>"
+    #| url=weburl | city=<cityname> |
+    #When receives a status "<status>"
+    #Then verify the weather "<Row_num>"
+    [32mThen [0m[32mconnectto webservice and check status "[0m[32m[1m200[0m[32m"[0m         [90m# STep_Definitions.connectto_webservice_and_check_status(String)[0m
