@@ -1,0 +1,1 @@
+FROM ${docker.registry}alooma/base:${git.commit.id.abbrev}
